@@ -1,0 +1,12 @@
+Package: dev.expl.package
+Title: Partial deviation explained calculations for mgcv gam models 
+Version: 0.0.0.9000
+Author: Nicholas Skaff <skaffnic@msu.edu>
+Maintainer: Nicholas Skaff <skaffnic@msu.edu>
+Description: Calculates the partial deviation explained for covariates in MGCV GAM models such that the deviation explained is independent of the order of removal and sums to the total deviation explained of the full model
+Depends: R (>= 3.2.3)
+Imports: mgcv, dplyr
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1

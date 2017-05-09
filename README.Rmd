@@ -1,0 +1,40 @@
+# dev.expl.mgcv
+
+This package calculates the deviation explained for individual covariates in a generalized additive model (gam) from the 'mgcv' R package such that the calculated values aren't dependent on order of covariate removal.
+
+### Getting Started
+
+Use "devtools" R package to install on your local machine.
+
+### Prerequisites
+
+You will need an understanding of the 'mgcv' package to run the included functions.
+
+
+### Code Example
+
+```{r}
+library(mgcv)
+library(dev.expl.mgcv)
+#adapted from mgcv documentation
+set.seed(2) ## simulate some data... 
+dat <- gamSim(1,n=400,dist="normal",scale=2)
+b <- gam(y~1+x0+s(x0, k=4)+ti(x2, x3, k=4),data=dat)
+model.list.output<-model.list(covariates = c("x0","s(x0, k=4)",
+"ti(x2, x3, k=4)"), response="y~1")
+dev.expl.calcs(model.list.output, data=dat, select = TRUE,family = gaussian())
+```
+
+
+## Authors
+
+* **Nicholas Skaff** - *Initial work* - [nskaff](https://github.com/nskaff)
+
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+Thanks for the tips Joe Stachelek!
