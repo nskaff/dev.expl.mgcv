@@ -20,12 +20,12 @@ using logical values to describe which terms are included in each of the model f
 \description{
 Create a list of all possible models from a set of covariates and a response variable.
 Generally, this function is only useful when the resulting object is passed to
-dev.expl.package::dev.expl.calcs.
+dev.expl.mgcv::dev.expl.calcs.
 }
 \examples{
 #from mgcv documentation
 library(mgcv)
-library(dev.expl.package)
+library(dev.expl.mgcv)
 set.seed(2) ## simulate some data...
 dat <- gamSim(1,n=400,dist="normal",scale=2)
 b <- gam(y~1+x0+s(x0, k=4)+ti(x2, x3, k=4),data=dat)

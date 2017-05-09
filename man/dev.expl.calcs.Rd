@@ -27,7 +27,7 @@ Calculates the deviation explained for individual covariates in a generalized ad
 }
 \examples{
 library(mgcv)
-library(dev.expl.package)
+library(dev.expl.mgcv)
 #adapted from mgcv documentation
 set.seed(2) ## simulate some data...
 dat <- gamSim(1,n=400,dist="normal",scale=2)
